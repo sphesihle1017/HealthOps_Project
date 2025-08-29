@@ -1,0 +1,184 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4"id="welcome"><b>We Care About Your<br />
+            Well<span id="special_text">Being</span>
+        </b>
+    </h1>
+    <!-- From Uiverse.io by 0xnihilism -->
+    <div class="card">
+        <span class="card__title">Newsletter</span>
+        <p class="card__content">
+            Get existential crisis delivered straight to your inbox every week.
+        </p>
+        <form class="card__form">
+            <input required="" type="email" placeholder="Email" />
+            <button class="card__button">Click me</button>
+        </form>
+    </div>
+
+</div>
+
+<div class="home_text">
+    <span id="your_health"><b>Your Health, </span><span id="our_mission">Our Mission </span><br /> </b>
+    At Health-Ops, your wellbeing is at the heart of <br /> 
+    everything we do. From preventive care to life-saving treatment, <br />
+    we are here to support you every step of the way.
+
+</div>
+
+
+
+<style>
+ 
+    #welcome{
+        font-family: Arial;
+        color: white;
+        text-align: left;
+        margin-top: 70px;
+    }
+    
+    #special_text{
+        color: limegreen;
+    }
+    
+
+    .home_text{
+        font-family:Arial, Helvetica, sans-serif;
+        color: white;
+    }
+    #your_health{
+        color: white;
+        font-weight: bold;
+    }
+
+    #our_mission{
+        color: limegreen;
+        font-weight: bold;
+    }
+    main { /* Or the container holding your main content */
+        flex-grow: 1; /* Allows the main content to take up available space */
+    }
+    
+
+
+    .card {
+        position:fixed;
+        width: 300px;
+        padding: 20px;
+        background-color: transparent !important;
+        border: 1px solid white;
+        box-shadow: 12px 12px 0 transparent;
+        transition: transform 0.3s, box-shadow 0.3s;
+        top:120px;
+        right: 120px;
+        float:right;
+        
+    }
+
+        .card:hover {
+            transform: translate(-5px, -5px);
+            box-shadow: 17px 17px 0 white;
+        }
+
+    .card__title {
+        font-size: 32px;
+        font-weight: 900;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .card__title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 90%;
+            height: 3px;
+            background-color: white;
+            transform: translateX(-100%);
+            transition: transform 0.3s;
+        }
+
+    .card:hover .card__title::after {
+        transform: translateX(0);
+    }
+
+    .card__content {
+        font-size: 16px;
+        line-height: 1.4;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .card__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+        .card__form input {
+            padding: 10px;
+            border: 3px solid white;
+            font-size: 16px;
+            font-family: inherit;
+            transition: transform 0.3s;
+            width: calc(100% - 26px); /* Adjust for padding and border */
+        }
+
+            .card__form input:focus {
+                outline: none;
+                transform: scale(1.05);
+                background-color: white;
+                color: black;
+            }
+
+    .card__button {
+        border: 3px solid #000;
+        background: #000;
+        color: #fff;
+        padding: 10px;
+        font-size: 18px;
+        left: 20%;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s;
+        width: 50%;
+        height: 100%;
+    }
+
+        .card__button::before {
+            content: "Sure?";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 105%;
+            background-color: #5ad641;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .card__button:hover::before {
+            transform: translateY(0);
+        }
+
+        .card__button:active {
+            transform: scale(0.95);
+        }
+
+   
+</style>
