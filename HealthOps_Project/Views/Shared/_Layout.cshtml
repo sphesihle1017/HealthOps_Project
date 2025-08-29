@@ -34,12 +34,13 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Book_Appointment">Book Appointment</a>
                           
                         </li>
-                        <li> 
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
-                        </li>
                         <li>
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
                         </li>
+                        <li> 
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
+                        </li>
+                       
                         <li class="nav-item">
                             <a class="nav-link" id="signin-btn"asp-area="" asp-controller="SignIn" asp-action="SignIn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
                         </li>
@@ -61,14 +62,38 @@
             <div class="row">
                 <div class="col-lg-4 mb-4 ">
                     <h5 class="text-uppercase fw-bold mb-4">Contact Us</h5>
-                    <p>
                         <u>Office information</u><br />
+                    <p>
+                        60 Western Road ,<br />
+                        Central ,<br />
+                        Gqeberha,<br />
+                        6001,<br />
+                        Eastern Cape ,<br />
+                        South Africa
                     </p>
-                  
                 </div>
+        </div>
 
-                
+            <div class="container">
+                <div class="row" id="contact_info">
+                    <div class="col-lg-4 mb-4 ">
+                        <h5 class="align-self-lg-center"></h5>
+                        <u>
+                            Contact Information
+                        </u><br />
+                        <p>
+                            (041) 667 3072 <br />
+                            (041) 886 0022
+                        </p>
+                        <p>
+                            <u>Email</u>
+                        </p>
+                        info@healthOps.co.za
+                    </div>
+
             </div>
+
+
             <hr class="my-4">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
@@ -188,15 +213,19 @@
             text-align:  left;
             
          }
+         #contact_info{
+            position: absolute; /* Allows precise positioning within the footer */
+            top: 30px; /* Aligns the top of the div with the top of the footer */
+            left: 50%; /* Moves the left edge of the div to the horizontal center */
+            transform: translateX(-50%); /* Shifts the div left by half its own width to truly center it */
+            width: 80%; /* Example width for the content div */
+            padding: 10px;
+            box-sizing: border-box; /* Includes padding in the width calculation */
+            margin-left: 370px;
+           
+         }
 
-                #button{
-                 color: #0E0E36;
-                }
-
-            #newsletter{
-            float: right;
-            text-align: right;
-            }
+           
     </style>
 </body>
 </html>
