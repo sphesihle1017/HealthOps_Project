@@ -2,6 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
+
 <div class="text-center">
     <h1 class="display-4"id="welcome"><b>We Care About Your<br />
             Well<span id="special_text">Being</span>
@@ -9,25 +10,27 @@
     </h1>
     <!-- From Uiverse.io by 0xnihilism -->
     <div class="card">
-        <span class="card__title">Newsletter</span>
+        <span class="card__title"> Appointents</span>
         <p class="card__content">
-            Get existential crisis delivered straight to your inbox every week.
+            Get assistance with finding a healthcare professional and book virtual consults online.<br />
+            Select a healthcare professional below to start the process.
         </p>
         <form class="card__form">
-            <input required="" type="email" placeholder="Email" />
-            <button class="card__button">Click me</button>
+        <button class="card__button">Click me</button>
         </form>
     </div>
 
 </div>
 
 <div class="home_text">
-    <span id="your_health"><b>Your Health, </span><span id="our_mission">Our Mission </span><br /> </b>
+    <span id="your_health"><b/>Your Health, </span><span id="our_mission">Our Mission </span><br /> <b/>
     At Health-Ops, your wellbeing is at the heart of <br /> 
     everything we do. From preventive care to life-saving treatment, <br />
     we are here to support you every step of the way.
 
 </div>
+
+
 
 
 
@@ -61,8 +64,14 @@
     main { /* Or the container holding your main content */
         flex-grow: 1; /* Allows the main content to take up available space */
     }
-    
 
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
 
     .card {
         position:absolute;
@@ -124,21 +133,8 @@
         gap: 15px;
     }
 
-        .card__form input {
-            padding: 10px;
-            border: 3px solid white;
-            font-size: 16px;
-            font-family: inherit;
-            transition: transform 0.3s;
-            width: calc(100% - 26px); /* Adjust for padding and border */
-        }
 
-            .card__form input:focus {
-                outline: none;
-                transform: scale(1.05);
-                background-color: white;
-                color: black;
-            }
+            
 
     .card__button {
         border: 3px solid #000;

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~/HealthOps_Project.styles.css" asp-append-version="true" />
 </head>
 <body>
+    <div class="page-wrapper">
     <header>
       
         
@@ -38,7 +39,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
                         </li>
                         <li> 
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
+                            <a class="nav-link text-dark scroll-bottom" asp-area="" asp-controller="Home" asp-action="">Contact Us</a>
                         </li>
                        
                         <li class="nav-item">
@@ -55,13 +56,13 @@
             @RenderBody()
         </main>
     </div>
-    
-
+     
+    </div>
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4 ">
-                    <h5 class="text-uppercase fw-bold mb-4">Contact Us</h5>
+                    <h5 class="text-uppercase fw-bold mb-4" id="contactus">Contact Us</h5>
                         <u>Office information</u><br />
                     <p>
                         60 Western Road ,<br />
@@ -72,6 +73,7 @@
                         South Africa
                     </p>
                 </div>
+            </div>
         </div>
 
             <div class="container">
@@ -103,6 +105,7 @@
             </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -110,6 +113,8 @@
     
 
     <style>
+
+      
         
         .navbar-brand {
             padding: 5px 15px;
@@ -200,13 +205,22 @@
             min-height: 100vh;
         }
 
-       
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Use 100dvh for dynamic viewport height on modern browsers */
+        }
+
+        main {
+            flex-grow: 1;
+        }
         
          footer {
             position: absolute;
             width: 100%;
-            height: 150px;
-            bottom:0;
+            height: auto;
+            margin: 0;
+            padding:0;
             background-color: #32CD32;
             color: #0E0E36;
             font-family: Arial, sans-serif;
@@ -226,6 +240,8 @@
          }
 
            
+
+
     </style>
 </body>
 </html>
